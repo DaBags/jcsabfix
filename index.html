@@ -51,9 +51,11 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const grid = document.querySelector('.grid');
-          grid.jcsabfix();
 
-    window.addEventListener('resize', debounce(grid.jcsabfix.bind(grid)));
+    if (grid) {
+      grid.jcsabfix();
+      window.addEventListener('resize', debounce(grid.jcsabfix.bind(grid)));
+    }
   })
 </script>
 </body>
